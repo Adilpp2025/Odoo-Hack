@@ -14,6 +14,17 @@ db.exec(`
     )
 `);
 
+db.exec(`
+    CREATE TABLE IF NOT EXISTS products (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        type TEXT NOT NULL,
+        sales_price REAL NOT NULL,
+        cost_price REAL NOT NULL,
+        notes TEXT
+    )
+`);
+
 console.log("Database connected successfully!");
 
 module.exports = db;
