@@ -3,6 +3,18 @@ const db = require("./database");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+const express = require('express');
+const cors = require('cors'); 
+const app = express();
+
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
+
+app.use(express.json());
+
 const app = express();
 
 app.use(express.json());
