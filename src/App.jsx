@@ -11,7 +11,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
 
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route
+  path="/admin"
+  element={<h1>ADMIN ROUTE WORKS!</h1>}
+/>
 
         <Route path="/staff" element={<StaffDashboard />} />
 
