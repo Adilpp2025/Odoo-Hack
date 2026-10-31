@@ -1,26 +1,18 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
-import Login from "./pages/Login";
-import AdminDashboard from "./pages/dashboards/AdminDashboard";
-import StaffDashboard from "./pages/dashboards/StaffDashboard";
-import CustomerDashboard from "./pages/dashboards/CustomerDashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route
+          path="/"
+          element={<h1>LOGIN ROUTE TEST</h1>}
+        />
 
         <Route
-  path="/admin"
-  element={<h1>ADMIN ROUTE WORKS!</h1>}
-/>
-
-        <Route path="/staff" element={<StaffDashboard />} />
-
-        <Route path="/customer" element={<CustomerDashboard />} />
-
-        <Route path="*" element={<Navigate to="/" replace />} />
+          path="/admin"
+          element={<h1>ADMIN ROUTE WORKS!</h1>}
+        />
       </Routes>
     </BrowserRouter>
   );
