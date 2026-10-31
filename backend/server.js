@@ -69,6 +69,19 @@ app.post("/api/auth/login", (req, res) => {
 
 const PORT = 3000;
 
+app.post("/api/products", (req, res) => {
+    const { name, type, sales_price, cost_price, notes } = req.body;
+    try {
+        const insertProduct = db.prepare(
+            "INSERT INTO products (name, type, sales_price, cost_price, notes) VALUES (?, ?, ?, ?, ?)"
+        );
+        const result = insertProduct.run(name, type, sales_price, cost_price, notes);
+        res.json({ success: true, message: "Product added", productId: result.lastInsertRowid });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
