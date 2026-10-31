@@ -1,0 +1,247 @@
+.products-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.products-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.products-heading h1 {
+  color: #17213a;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.products-heading p {
+  color: #9299a9;
+  font-size: 13px;
+}
+
+.add-product-button,
+.save-product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #7163df;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-product-button:hover,
+.save-product-button:hover {
+  background: #5e50cb;
+}
+
+.products-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  color: #7163df;
+  border: 1px solid #edf0f5;
+  border-radius: 13px;
+  padding: 22px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+
+.products-summary p {
+  color: #9299a9;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.products-summary h2 {
+  color: #17213a;
+  font-size: 25px;
+}
+
+.products-table-container {
+  background: white;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.products-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fc;
+  border: 1px solid #e8eaf0;
+  border-radius: 9px;
+  padding: 0 13px;
+  width: 350px;
+  color: #9299a9;
+}
+
+.products-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 13px;
+}
+
+.products-table-wrapper {
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 650px;
+}
+
+.products-table th {
+  color: #9299a9;
+  background: #f8f9fc;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  padding: 15px;
+}
+
+.products-table td {
+  padding: 17px 15px;
+  border-bottom: 1px solid #f0f1f5;
+  color: #667085;
+  font-size: 13px;
+}
+
+.products-table td strong {
+  color: #17213a;
+}
+
+.delete-product-button {
+  background: #fff0f0;
+  color: #e34c4c;
+  border: none;
+  padding: 8px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.delete-product-button:hover {
+  background: #ffe0e0;
+}
+
+.no-products {
+  padding: 30px;
+  text-align: center;
+  color: #9299a9;
+  font-size: 13px;
+}
+
+/* Add product modal */
+.product-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+}
+
+.product-modal {
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 27px;
+}
+
+.product-modal-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-modal-heading h2 {
+  color: #17213a;
+  font-size: 21px;
+}
+
+.product-modal-heading button {
+  border: none;
+  background: #f1f2f6;
+  padding: 7px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.product-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-modal label {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 14px 0 8px;
+}
+
+.product-modal input,
+.product-modal select,
+.product-modal textarea {
+  border: 1px solid #e3e6ed;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+.product-modal textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.product-modal input:focus,
+.product-modal select:focus,
+.product-modal textarea:focus {
+  border-color: #7163df;
+}
+
+.save-product-button {
+  margin-top: 22px;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .products-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .products-summary {
+    width: 100%;
+  }
+
+  .products-search {
+    width: 100%;
+  }
+}
